@@ -27,8 +27,8 @@ function getSplits(n,totalBill,nhigh,nmed,nlow){
         mp = 0.1;
     }
     else {
-        hp = 0.6;
-        mp = 0.3;
+        hp = 0.9;
+        mp = 0.1;
         lp = 0.1;
     }
    
@@ -73,8 +73,8 @@ function getSplits(n,totalBill,nhigh,nmed,nlow){
 
 let totalBill = 200;
 let n = 10;
-let nhigh = 8;
-let nmed = 2;
-let nlow = 0;
+let nhigh = 7;
+let nmed = 1;
+let nlow = 2;
 
 getSplits(n,totalBill,nhigh,nmed,nlow)
