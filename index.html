@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
     <title>Bill Splitter</title>
   </head>
   <body>
@@ -25,11 +26,24 @@
       <br>
       <button>Generate Splits</button>
     </div>
-    <div class="splits">
-        <ul>
-            
-        </ul>
-    </div>
+    <table class="splits">
+        <thead>Splits</thead>
+        <tr>
+            <th>Name</th>
+            <th>Level</th>
+            <th>Contribution</th>
+        </tr>
+        <tr>
+            <td class="name">Name</td>
+            <td class="level">High</td>
+            <td class="amount">100</td>
+        </tr>
+        <tr>
+            <td class="name">Name</td>
+            <td class="level">High</td>
+            <td class="amount">100</td>
+        </tr>
+    </table>
     <script src="script.js"></script>
   </body>
 </html>
