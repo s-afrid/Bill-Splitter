@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bill Splitter</title>
-</head>
-<body>
+  </head>
+  <body>
+    <header>
+      <h1>Bill Spliter</h1>
+    </header>
+    <div class="inputs">
+    <label for="bill_amount">Bill Amount: </label>
+      <input type="text" name="bill_amount" id="bill_amount" />
+      <br />
+      <label>Contributor: </label>
+      <input type="text" name="contributor" id="contributor" />
+      <label>Contribution Level: </label>
+      <select name="level" id="level">
+        <option value="high">High</option>
+        <option value="med">Medium</option>
+        <option value="opel">Low</option>
+      </select>
+      <button>Add</button>
+      <br>
+      <button>Generate Splits</button>
+    </div>
+    <div class="splits">
+        <ul>
+            
+        </ul>
+    </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

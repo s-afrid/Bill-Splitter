@@ -26,11 +26,6 @@ function getSplits(totalBill,nhigh,nmed,nlow){
     for(let i = 1; i<=nlow;i++){
         lcontribution.push(parseFloat((low_unit*per_unit).toFixed(2)))
     }
-
-
-    console.log(hcontribution);
-    console.log(mcontribution);
-    console.log(lcontribution);
 }
 
 let totalBill = 200;
