@@ -1,74 +1,36 @@
 console.log("Hello")
+let hcontribution = []
+let mcontribution = []
+let lcontribution = []
 
-
-function getSplits(n,totalBill,nhigh,nmed,nlow){
-    let contributions = [];
-    let hp = 0;
-    let mp = 0;
-    let lp = 0
-    // Get percentage
-    // if any two of them is zero
-    if ((nhigh==0 && nmed==0) || (nmed==0 && nlow==0) || (nhigh==0 && nlow==0)){
-        lp = 1;
-        hp = 1;
-        mp = 1
-    }
-    // if any one of them is zero
-    else if(nhigh==0) {
-        mp = 0.9;
-        lp = 0.1;
-    }
-    else if(nmed==0) {
-        hp = 0.9;
-        lp = 0.1;
-    }
-    else if(nlow==0) {
-        hp = 0.9;
-        mp = 0.1;
-    }
-    else {
-        hp = 0.9;
-        mp = 0.1;
-        lp = 0.1;
-    }
-   
-    let highContribution = totalBill*hp;
-    let medContribution = totalBill*mp;
-    let lowContribution = totalBill*lp;
-
-     // Contribution from high
-    for(let i=1;i<=nhigh;i++){
-        contributions.push(parseFloat((highContribution/nhigh).toFixed(2)));
-        
-    }
-    // Contribution from medium
-   
-    for(let i=1;i<=nmed;i++){
-        contributions.push(parseFloat((medContribution/nmed).toFixed(2)));
-        
-    }
-    // Contribution from low
-   
-    for(let i=1;i<=nlow;i++){
-        contributions.push(parseFloat((lowContribution/nlow).toFixed(2)));
-        
-    }
-
-    // let contributions = [contributionsh,contributionsm,contributionsl]
+function getSplits(totalBill,nhigh,nmed,nlow){
     
-    // if ((nhigh==0) && (nmed>=nlow)){
-    //     contributions.reverse()
-    // }
-    // else if ((nmed==0) && (nhigh>=nlow)){
-    //     contributions.reverse()
-    // }
-    // else if ((nlow==0) && (nhigh>=nmed)){
-    //     contributions.reverse()
-    // }
+    // Unit for each tier
+    let high_unit = 3;
+    let med_unit = 2;
+    let low_unit = 1;
+    // total units
+    let total_units = (high_unit*nhigh) + (med_unit*nmed) + (low_unit*nlow);
+    // value per unit
+    let per_unit = totalBill/total_units;
+
+    // high contribution
+    for(let i = 1; i<=nhigh;i++){
+        hcontribution.push(parseFloat((high_unit*per_unit).toFixed(2)))
+    }
+    // medium contribution
+    for(let i = 1; i<=nmed;i++){
+        mcontribution.push(parseFloat((med_unit*per_unit).toFixed(2)))
+    }
+    // low contribution
+    for(let i = 1; i<=nlow;i++){
+        lcontribution.push(parseFloat((low_unit*per_unit).toFixed(2)))
+    }
 
 
-
-    console.log(contributions);
+    console.log(hcontribution);
+    console.log(mcontribution);
+    console.log(lcontribution);
 }
 
 let totalBill = 200;
@@ -77,4 +39,4 @@ let nhigh = 7;
 let nmed = 1;
 let nlow = 2;
 
-getSplits(n,totalBill,nhigh,nmed,nlow)
+getSplits(totalBill,nhigh,nmed,nlow)
