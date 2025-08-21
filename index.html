@@ -24,16 +24,16 @@
       <input type="text" name="contributor" id="contributor" />
       <label>Contribution Level: </label>
       <select name="level" id="level">
-        <option value="high">High</option>
-        <option value="med">Medium</option>
-        <option value="opel">Low</option>
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
       </select>
       <button id="add">
         <img src="img/add.svg" alt="add">
       </button>
       </div>
       <div class="generate">
-<button>Generate Splits</button>
+<button id="generate">Generate Splits</button>
       </div>
       
     </div>
@@ -41,9 +41,9 @@
       <h2>Spilts</h2>
 <table id="splitTable">
         <tr>
-            <th>Name</th>
-            <th>Level</th>
-            <th>Contribution</th>
+            <th class="name">Name</th>
+            <th class="level">Level</th>
+            <th class="contribution">Contribution</th>
         </tr>
     </table>
     </div>
