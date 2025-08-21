@@ -3,4 +3,33 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 40px;
+}
+
+.inputs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.inputs .contributions{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.splits {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media (max-width: 600px) {
+    .inputs .contributions{
+        flex-direction: column;
+        gap: 10px;
+    }
 }

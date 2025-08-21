@@ -28,10 +28,29 @@ function getSplits(totalBill,nhigh,nmed,nlow){
     }
 }
 
+function getNames() {
+    let table = document.getElementsByTagName("table");
+    console.log("getNames called");
+    console.log("Table innerHTML before modification: ", table.innerHTML);
+    
+    table.innerHTML = table.innerHTML + 
+    console.log("Table innerHTML after modification: ", table.innerHTML);
+}
+
 let totalBill = 200;
 let n = 10;
 let nhigh = 7;
 let nmed = 1;
 let nlow = 2;
 
-getSplits(totalBill,nhigh,nmed,nlow)
+
+async function main() {
+    // Add event listener to add button
+    document.getElementById("add").addEventListener("click", e=>{
+        console.log(e.target)
+        getNames()
+    });
+    getSplits(totalBill,nhigh,nmed,nlow);
+}
+
+main()
