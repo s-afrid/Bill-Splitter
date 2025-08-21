@@ -29,12 +29,12 @@ function getSplits(totalBill,nhigh,nmed,nlow){
 }
 
 function getNames() {
-    let table = document.getElementsByTagName("table");
-    console.log("getNames called");
-    console.log("Table innerHTML before modification: ", table.innerHTML);
-    
-    table.innerHTML = table.innerHTML + 
-    console.log("Table innerHTML after modification: ", table.innerHTML);
+    let table = document.getElementById("splitTable").firstElementChild;
+    table.innerHTML = table.innerHTML + `<tr>
+            <td>${document.getElementById('contributor').value}</td>
+            <td>${document.getElementById('level').value}</td>
+            <td></td>
+        </tr>`
 }
 
 let totalBill = 200;
