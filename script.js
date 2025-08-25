@@ -53,6 +53,7 @@ function getNames() {
     !(document.getElementById("contributor").value == "")
   ) {
     addRow(table);
+    document.querySelector(".splits").style.visibility = 'visible';
   } else if (!(document.getElementById("contributor").value == "")) {
     let new_entry = document.getElementById("contributor").value;
     flag = true;
@@ -111,6 +112,7 @@ async function main() {
   // Add event listener to add button
   document.getElementById("add").addEventListener("click", (e) => {
     getNames();
+    
   });
 
   // Add event listener to generate button
@@ -123,6 +125,8 @@ async function main() {
         getMeta();
         getSplits(totalBill, nhigh, nmed, nlow);
         generate();
+        
+
     }
   });
 }
